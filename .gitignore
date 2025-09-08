@@ -1,0 +1,38 @@
+# Arquivos de estado do Terraform
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Arquivos de plano do Terraform
+*.tfplan
+*.tfplan.*
+
+# Arquivos locais de configuração
+.terraform/
+.terraform.lock.hcl
+
+# Arquivos de variáveis locais (pode conter credenciais)
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Arquivos de credenciais
+*.pem
+*.key
+*.p12
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Credenciais AWS/Cloud (caso alguém salve por engano)
+.aws/
+*.csv
+
