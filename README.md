@@ -1,4 +1,4 @@
-# Módulo Terraform – Cliente DataLake (FacData)
+# Módulo Terraform – Cliente DataLake 
 
 Este módulo automatiza a criação de toda a estrutura necessária para conceder acesso a clientes no **Athena + Glue**, garantindo isolamento, segurança e padronização entre ambientes.
 
@@ -6,7 +6,7 @@ Este módulo automatiza a criação de toda a estrutura necessária para concede
 
 ## 📖 Visão Geral
 
-O objetivo é facilitar a criação de recursos AWS para cada cliente do **FacData**, evitando trabalho manual e erros de configuração.  
+O objetivo é facilitar a criação de recursos AWS para cada cliente do **AWS**, evitando trabalho manual e erros de configuração.  
 Com este módulo, basta informar o nome do cliente e o bucket de resultados, que todo o pacote de recursos será criado automaticamente.
 
 ---
@@ -69,7 +69,7 @@ terraform/
 | Variável          | Descrição | Tipo | Exemplo |
 |-------------------|-----------|------|---------|
 | `nome_do_cliente` | Nome do cliente (em minúsculas, sem espaços) | string | `"luiz-aws"` |
-| `bucket_resultados` | Bucket central para salvar resultados do Athena | string | `"610725259232-AthenaQueryResult"` |
+| `bucket_resultados` | Bucket central para salvar resultados do Athena | string | `"bucketluiz"` |
 
 ---
 
@@ -83,7 +83,7 @@ provider "aws" {
 module "cliente_luiz" {
   source            = "./modules/cliente_datalake"
   nome_do_cliente   = "luiz-aws"
-  bucket_resultados = "610725259232-AthenaQueryResult"
+  bucket_resultados = "bucketluiz"
 }
 ```
 
